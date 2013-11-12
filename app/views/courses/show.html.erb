@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>Course <%= @course.department %> <%= @course.number %> <%= @course.title %></h1>
+</div>
+
+<p>
+  <b>Department:</b>
+  <%= @course.department %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @course.number %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @course.title %>
+</p>
+
+<p>
+  <b>Meetings:</b>
+
+  <% @meetings.each do |meeting| %>
+  	<p><%= meeting.held_on %></p>
+  <% end %>
+</p>
+
+

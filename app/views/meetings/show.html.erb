@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>Meeting #<%= @meeting.id %></h1>
+</div>
+
+<p>
+  <b>Held on:</b>
+  <%= @meeting.held_on %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%= @course.department %> <%= @course.number %> <%= @course.title %>
+</p>
+
+<p>
+  <b>Students:</b>
+
+  	<% @attendance.each do |attendance| %>
+  	<% student = Student.find_by(:id => attendance.student_id) %>
+  	<p><%= student.first_name %> <%= student.last_name %> </p>
+
+<% end %> 
+
+
+</p>
+
+
